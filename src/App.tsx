@@ -1,13 +1,13 @@
 
-import { Header } from './components/Header';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { AppRoutes } from './routes';
 
 import './styles/global.css';
 
 export function App() {
 	return (
-		<>
-			<Header />
-			<h1>Hello!</h1>
-		</>
+		<Router basename="/react-vite-ghpages-deploy">
+			<AppRoutes />
+		</Router>
 	);
 }

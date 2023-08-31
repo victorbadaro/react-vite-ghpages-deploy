@@ -7,6 +7,30 @@ header>div {
 	display: flex;
 	align-items: center;
 	margin: 0 auto;
-	width: 80px;
+	width: 80%;
 	height: 100%;
+}
+
+header>div nav a {
+	position: relative;
+}
+
+header>div nav a::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 0;
+	height: 2px;
+	border-radius: 2px;
+	background-color: #fff;
+	transition: width 200ms;
+}
+
+header>div nav a:hover::after {
+	width: 100%;
+}
+
+header>div nav a+a {
+	margin-left: 12px;
 }
